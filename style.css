@@ -29,10 +29,54 @@ body {
     animation: floaty 2s infinite;
 }
 
+/* rend le rectangle arrondit => tombe */ 
 #spooky #body {
     position: relative;
     margin: 50px auto 0;
     width: 180px;
     height: 220px;
     background: #f2fbf1;
+    border-top-left-radius: 90px;
+    border-top-right-radius: 90px;
 }
+
+#spooky #body:before,
+#spooky #body:after {
+    content: "";
+    position: absolute;
+    top:130px;
+    display:inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f2fbf1;
+    animation: floaty .2s infinite;
+}
+/* les mains */
+#spooky #body:before{
+    left:-18px;
+}
+
+#spooky #body:after{
+    right:-18px;
+}
+/* les yeux */
+#spooky #body #eyes:before,
+#spooky #body #eyes:after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #252c49;
+    border-radius: 50%;
+}
+/* positionnement des yeux */
+#spooky #body #eyes {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 90px 0 0;
+    width: 90px;
+    height: 20px;
+}
+
