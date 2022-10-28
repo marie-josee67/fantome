@@ -52,6 +52,7 @@ body {
     background: #f2fbf1;
     animation: floaty .2s infinite;
 }
+
 /* les mains */
 #spooky #body:before{
     left:-18px;
@@ -60,6 +61,7 @@ body {
 #spooky #body:after{
     right:-18px;
 }
+
 /* les yeux */
 #spooky #body #eyes:before,
 #spooky #body #eyes:after{
@@ -70,6 +72,7 @@ body {
     background: #252c49;
     border-radius: 50%;
 }
+
 /* positionnement des yeux */
 #spooky #body #eyes {
     display: flex;
@@ -78,5 +81,44 @@ body {
     padding: 90px 0 0;
     width: 90px;
     height: 20px;
+}
+
+/* forme de la bouche */
+#spooky #body #mouth {
+    background: #252c49;
+    margin: 25px auto 0;
+    width: 60px;
+    height: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+#spooky #body #mouth:before{
+    content: "";
+    display: block;
+    background: #fff;
+    margin-left: 20px;
+    width: 10px;
+    height: 10px;
+}
+
+ /* les pieds*/
+
+#spooky #body #feet{
+    position: absolute;
+    display: flex;
+    bottom:-18px;
+    width: 180px;
+    height: 36px;
+}
+
+#spooky #body #feet > *,
+#spooky #body #feet::before,
+#spooky #body #feet::after{
+    content:"";
+    width: 36px;
+    height: 36px;
+    background: #f2fbf1;
+    border-radius: 50%;
 }
 
